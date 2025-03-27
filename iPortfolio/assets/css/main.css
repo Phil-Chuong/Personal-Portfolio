@@ -504,7 +504,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: clip;
 }
 
@@ -899,6 +899,18 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+.carousel-indicators {
+  display: none !important;
+}
+
+/* Red & bolder arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(5000%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    width: 6% !important; 
+}
+
 
 /*--------------------------------------------------------------
 # Services Section
