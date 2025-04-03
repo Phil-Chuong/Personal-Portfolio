@@ -564,7 +564,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -577,8 +577,9 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 700;
+  color: white;
 }
 
 .hero p {
@@ -598,7 +599,7 @@ section,
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 255, 255, 0.5);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -609,14 +610,27 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+  .hero {
+    min-height: 70vh;
+    background: url("../img/Thailand-2.webp") no-repeat center center / cover;
+    background-size: cover;
   }
 
   .hero p {
     font-size: 20px;
   }
 }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero .container {
+  will-change: opacity, transform;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+
 
 /* Custom Download CV Button Styles */
 .download-cv-button {
@@ -1292,6 +1306,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+/* .starter-section {
+  
+} */
